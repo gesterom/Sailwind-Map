@@ -1189,7 +1189,12 @@ require([
 						day: day,
 						time: time,
 						winddir: winddir,
-					});	
+					});
+					mapObjects.lines.push({
+						type: DrawMode.GrayLine,
+						p0: [coords[1], coords[0]],
+						p1: [coords[1] + Math.cos(Math.round(coords[3])) * 0.01, coords[0] + Math.sin(Math.round(coords[3])) * 0.01]
+					});
 
 					
 				}
